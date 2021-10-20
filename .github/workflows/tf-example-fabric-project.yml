@@ -1,4 +1,4 @@
-name: 'Terraform-Plan-Test'
+name: 'TF Example Fabric Project'
 
 on:
   push:
@@ -71,6 +71,9 @@ jobs:
       - name: Terraform Plan
         id: plan
         run: terraform plan -out workspace.plan
+        env:
+          TF_VAR_billing_account = ${{ secrets.TF_VAR_billing_account }}
+          TF_VAR_parent= ${{ secrets.TF_VAR_parent }}
 
       - name: Post Plan
         if: always() && github.ref != 'refs/heads/main' && (steps.plan.outcome == 'success' || steps.plan.outcome == 'failure')
