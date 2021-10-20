@@ -20,7 +20,7 @@ jobs:
       TF_IN_AUTOMATION: true
     defaults:
       run:
-        working-directory: modules/**/
+        working-directory: examples/**/
     steps:
       - name: Checkout
         uses: actions/checkout@v2
