@@ -2,7 +2,7 @@
 name: Ask for help
 about: Ask the community for help
 title: ''
-labels: Help needed
+labels: question
 assignees: ''
 
 ---
