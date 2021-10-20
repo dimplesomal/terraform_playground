@@ -6,8 +6,7 @@ on:
     - main
   pull_request:
     paths:
-    - 'modules/**/**'
-    - 'examples/**/**'
+    - '**.tf'
 
 jobs:
   terraform:
