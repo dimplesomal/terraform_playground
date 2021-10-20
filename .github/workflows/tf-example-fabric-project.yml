@@ -71,9 +71,7 @@ jobs:
       - name: Terraform Plan
         id: plan
         run: terraform plan -out workspace.plan
-        env:
-          TF_VAR_billing_account = ${{ secrets.TF_VAR_billing_account }}
-          TF_VAR_parent= ${{ secrets.TF_VAR_parent }}
+        args: '-var="billing_account=ABCD-1234-ABCD-1234","parent=1234567890"'
 
       - name: Post Plan
         if: always() && github.ref != 'refs/heads/main' && (steps.plan.outcome == 'success' || steps.plan.outcome == 'failure')
