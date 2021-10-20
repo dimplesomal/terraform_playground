@@ -7,7 +7,7 @@ on:
   pull_request:
     paths:
     - 'modules/**/**'
-    - '.github/workflows/tf-plan-test.yml'
+    - 'examples/**/**'
 
 jobs:
   terraform:
