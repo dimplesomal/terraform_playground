@@ -1,7 +1,7 @@
 ---
 name: Ask for help
 about: Ask the community for help
-title: ''
+title: "[ASK]"
 labels: question
 assignees: ''
 
