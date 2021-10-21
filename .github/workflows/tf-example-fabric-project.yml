@@ -73,7 +73,7 @@ jobs:
         run: terraform plan -out workspace.plan
         env:
           TF_VAR_billing_account: 'ABCD-1234-ABCD-1234'
-          TF_VAR_parent: '1234567890'
+          TF_VAR_parent: 'folders/1234567890'
 
       - name: Post Plan
         if: always() && github.ref != 'refs/heads/main' && (steps.plan.outcome == 'success' || steps.plan.outcome == 'failure')
